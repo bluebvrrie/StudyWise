@@ -1,0 +1,10 @@
+.venv/
+venv/
+.env
+.env.*
+__pycache__/
+*.pyc
+.vscode/
+step1_test.py
+step2_test.py
+step8_test.py
