@@ -1,0 +1,55 @@
+PROJECT MODULE: STUDENT PERFORMANCE & PASS/FAIL ANALYSIS
+Student: Keerthana S. Nair (AM.SC.U4AIE25119)
+Project: Student Academic Risk Prevention & Early Intervention System
+
+OBJECTIVE
+This module examines assignment, midterm, and final marks in the supplied college
+student CSV. It summarizes performance, estimates pass/fail outcomes using a
+clearly stated configurable rule, identifies students near or below that rule,
+and displays results through a browser-based Streamlit application.
+
+DATASET REVIEW
+The supplied file contains 1,000 rows and 15 columns: Student_ID, Student_Name,
+Gender, Department, Year, Attendance, Study_Hours, Assignment_Marks,
+Midterm_Marks, Final_Marks, Admission_Date, Assignment_Submission_Date,
+Exam_Date, Login_DateTime, and Scholarship. The three mark columns contain
+integers in the observed range 35–100. Attendance, Study_Hours, and Scholarship
+each have 8 missing values. There are 3 repeated Student_ID values (the first
+three student records occur twice). The app retains all rows because the CSV
+does not say whether these repeats are erroneous duplicates or separate records.
+
+METHOD AND ASSUMPTIONS
+The app computes a descriptive average from the three marks. Its illustrative
+pass rule is that each of Assignment_Marks, Midterm_Marks, and Final_Marks must
+be at least the selected cutoff (default 40). The user can change the cutoff.
+This conservative component-wise rule and default are assumptions for the demo:
+the CSV and brief provide no official pass/fail label, minimum threshold, weights,
+or assessment policy. Therefore, outcomes are estimates and must be checked
+against the professor's actual grading rules before being treated as official.
+“At risk” means an estimated fail or average marks less than ten points above
+the selected cutoff. Attendance, study hours, dates, and scholarship are not
+used to determine result. No causal or predictive conclusion is claimed.
+
+DEMO FINDING
+With the default illustrative cutoff of 40 and the component-wise rule, the
+supplied rows produce 854 estimated passes and 146 estimated fails. This count
+is specific to this assumed rule and is not an official college outcome.
+
+FEATURES
+The module validates required columns and mark ranges, handles file and data
+errors, filters by department, year, and estimated result, displays pass/fail
+counts by department and assessment mark distributions, and offers downloadable
+filtered results (CSV) and a concise text report. It uses Python functions,
+conditionals, exception handling, CSV input/output, pandas DataFrames, NumPy
+calculations, matplotlib charts, and Streamlit widgets.
+
+LIMITATIONS
+The provided dataset does not identify courses or subjects, total marks, grading
+weights, official pass status, or semester. It also contains missing descriptive
+fields and repeated identifiers. The charts describe the supplied observations
+only; they do not prove that attendance or study hours cause performance.
+
+CONCLUSION
+This module turns the provided marks into a transparent, interactive summary
+that can help review possible academic risk. It is a supporting analysis tool;
+the result rule must be confirmed with the institution before academic use.
