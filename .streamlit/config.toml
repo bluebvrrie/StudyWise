@@ -1,0 +1,12 @@
+# Theme: light, indigo/blue/teal. Streamlit reads this file when you start the app
+# from the project folder (the folder that contains app.py).
+[theme]
+base = "light"
+primaryColor = "#4776E6"
+backgroundColor = "#F5F7FB"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#1F2937"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false

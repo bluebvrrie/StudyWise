@@ -1,0 +1,16 @@
+EduTrack - attendance cleaning report
+Raw file (unchanged): sample_dataset.csv
+Cleaned file: attendance_cleaned.csv
+Raw rows: 6000
+Cleaned rows kept: 6000
+Rows rejected (see rejected_rows.csv): 0
+Unique students: 500
+Exact duplicate rows in raw: 0
+Duplicates by key ['student_id', 'subject_code', 'date', 'class_start_time']: 0
+Missing time_in/time_out kept as empty for absent students: 950
+student_name column removed from cleaned file (not needed); student_id kept.
+Consistency checks (reported only, values NOT changed):
+  - Present records with missing time_in: 0
+  - Absent records that have a time_in/time_out: 0
+  - Absent records marked late: 0
+  - Late flag disagrees with time_in > class start: 0
