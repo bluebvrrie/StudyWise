@@ -1,5 +1,5 @@
 Record_ID,Student_ID,Subject,Previous_Marks,Target_Marks,Difficulty,Study_Hours,Exam_Days_Left,Target_Grade
-R001,S001,Mathematics,65.0,85.0,4,2.0,5,A
+R001,S001,Mathematics,70.0,90.0,2,2.0,5,A
 R002,S001,Physics,78.0,90.0,3,1.5,10,A
 R003,S001,Programming,88.0,95.0,2,2.0,14,A
-R004,S001,Chemistry,60.0,80.0,4,1.0,7,A
+R005,S009,Social,50.0,90.0,4,2.0,10,A
