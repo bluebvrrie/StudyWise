@@ -84,13 +84,13 @@ def show_homepage():
 
     with fourth:
         st.markdown(
-            """<div class="module-card pending"><div class="module-icon">✨</div>
-            <h3>Coming soon</h3>
-            <p><strong>Teammate module</strong><br>Her page will be connected here
-            when it is ready. This space is reserved for a future StudyWise tool.</p></div>""",
+            """<div class="module-card"><div class="module-icon">🎓</div>
+            <h3>Academic Performance Analysis</h3>
+            <p>Explore grade patterns and compare student-reported last-semester and
+            expected graduation CGPA ranges by course, with filtered records and downloads.</p></div>""",
             unsafe_allow_html=True,
         )
-        st.button("Module not available yet", disabled=True, use_container_width=True)
+        st.page_link("academic_performance_page.py", label="Open Academic Performance", icon="🎓", use_container_width=True)
 
     st.markdown(
         '<div class="footer">StudyWise · Student academic support platform</div>',
@@ -104,6 +104,7 @@ pages = [
     st.Page(PROJECT / "study_dashboard.py", title="Study Planner", icon="📚"),
     st.Page(PROJECT / "pages" / "Attendance_Analysis.py", title="Attendance Analytics", icon="📅"),
     st.Page(PROJECT / "student_performance_app.py", title="Student Performance", icon="📊"),
+    st.Page(PROJECT / "academic_performance_page.py", title="Academic Performance", icon="🎓"),
 ]
 navigation = st.navigation(pages)
 navigation.run()
